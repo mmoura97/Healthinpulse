@@ -5,11 +5,13 @@
 </p>
 
 
+
 # 👥 Integrantes
 
-## Integrantes:  <a href="">Igor</a>, <a href="https://www.linkedin.com/in/kau%C3%AA-souza/">Kauê Souza</a>, <a href="https://www.linkedin.com/in/mmoura97/">Matheus Moura</a>, <a href="">Murylo Amaral</a>, <a href="https://www.linkedin.com/in/pedro-henrique-camacho-14a13b345/">Pedro Henrique Camacho</a>,
+## Integrantes:  <a href="">Igor</a>, <a href="https://www.linkedin.com/in/kau%C3%AA-souza/">Kauê Souza</a>, <a href="https://www.linkedin.com/in/mmoura97/">Matheus Moura</a>, <a href="">Murylo Amaral</a>, <a href="https://www.linkedin.com/in/pedro-henrique-camacho-14a13b345/">Pedro Henrique Camacho</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/allan-roberto-molto-80b85617/">Allan Roberto Molto</a>
+
 
 # 🩺 HealthInPulse
 
@@ -17,41 +19,55 @@
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/4YJYWj1/Organiz-Ai.png" alt="Organiz-Ai" border="0" /></a>
 </p>
 
+
 # 🎨 Design
 <a href="https://www.figma.com/design/pcgUF3UIKvVihtgR60Srfb/Prot%C3%B3tipo-Projeto-ADS-3?node-id=0-1&t=cU5q6SxQyyQsoppQ-1">Figma</a>
 
-# 📌 Sobre o Projeto
 
-O HealthInPulse é uma pulseira inteligente que combina hardware vestível com análise preditiva avançada.
+# 📌 Apresentação do Projeto
 
-A solução coleta sinais vitais em tempo real, como batimentos cardíacos, e utiliza esses dados para gerar alertas e insights sobre a saúde do usuário.
+O HealthInPulse é uma proposta de solução tecnológica voltada para o monitoramento contínuo da saúde, apresentada no contexto acadêmico com foco em inovação e prevenção.
 
-## 🎯 Objetivo
+A ideia consiste no desenvolvimento de uma pulseira inteligente capaz de coletar dados fisiológicos em tempo real e fornecer informações relevantes ao usuário.
 
-<p>✅ Criar uma solução acessível e inteligente para monitoramento contínuo da saúde.</p>
-<p>✅ Ajudar usuários a prevenirem problemas antes que se tornem críticos</p>
+## 🚨 Problema
 
-# 🛠 Estrutura de pastas
+<p> Diagnósticos tardios.</p>
+<p> Identificação de doenças em estágios avançados</p>
+<p> Aumento de custos com tratamentos</p>
+<p> Impactos na qualidade de vida </p>
 
--Raiz<br>
-|<br>
-|-->Documentos<br>
-|-->Imagens<br>
- &emsp;|-->Fiap Logo<br>
-|-->src<br>
- &emsp;|-->Android/android-app<br>
- &emsp;|-->Backend/organizai-api<br>
-|readme.md<br>
 
-## 🎓 Referências
+# 💡 Proposta de Solução
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://chooser-beta.creativecommons.org/>
-4. <https://www.toptal.com/developers/gitignore>
+O HealthInPulse propõe uma abordagem baseada em monitoramento contínuo e preventivo, permitindo acompanhar indicadores de saúde em tempo real.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
-4. <https://freesound.org/>
-5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+A solução é integrada ao aplicativo Blua, possibilitando a visualização dos dados e recebimento de alertas.
+
+## ⚙️ Funcionamento
+
+O sistema funciona em quatro etapas principais:
+
+1. Coleta de dados por sensores, incluindo:
+    - Temperatura corporal
+    - Batimentos cardíacos
+    - Pressão arterial
+    - Movimento
+2. Envio dos dados para processamento
+3. Análise das informações coletadas
+4. Geração de alertas e insights ao usuário
+
+## 🧠 Análise dos Dados
+
+Com base nos dados coletados, o sistema permite:
+    - Identificação de padrões anormais
+    - Geração de recomendações personalizadas
+
+## 🔮 Considerações Finais
+
+O projeto reforça a importância da evolução do modelo atual de saúde, propondo uma transição de um sistema reativo para um sistema proativo e orientado a dados.
+
+
+## 🚧 Status do Projeto
+
+Projeto acadêmico desenvolvido na FIAP para apresentação à empresa Care Plus.
