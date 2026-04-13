@@ -8,17 +8,17 @@
 
 ## 👥 Integrantes
 
-- Igor  
-- Kauê Souza  
-- Matheus Moura  
-- Murylo Amaral  
-- Pedro Henrique Camacho  
+- <a href="">Igor</a>  
+- <a href="https://www.linkedin.com/in/kau%C3%AA-souza/">Kauê Souza</a>  
+- <a href="https://www.linkedin.com/in/mmoura97/">Matheus Moura</a>  
+- <a href="">Murylo Amaral</a>  
+- <a href="https://www.linkedin.com/in/pedro-henrique-camacho-14a13b345/">Pedro Henrique Camacho</a>  
 
 ---
 
 ## 👨‍🏫 Professores Orientadores
 
-- Allan Roberto Molto  
+- <a href="https://www.linkedin.com/in/allan-roberto-molto-80b85617/">Allan Roberto Molto</a>  
 
 ---
 
@@ -26,6 +26,9 @@
 
 <p align="center">
   <img src="./Images/design.png" alt="Design do projeto" width="600">
+</p>
+<p align="center">
+  <sub>Protótipo desenvolvido no Figma</sub>
 </p>
 
 ---
