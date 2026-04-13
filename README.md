@@ -1,16 +1,17 @@
-# FIAP
+# FIAP - Faculdade de Informática e Administração PaulistaFaculdade de Informática e Administração Paulista
 
 <p align="center">
-<a href= "[https://www.fecap.br/](https://play.google.com/store/apps/details?id=br.com.fiap.fiapp&hl=pt_PT)"><img src="[https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU](https://play-lh.googleusercontent.com/S70rI7VrwLic7_p-ax7iAOOopQhcPCzmqyLe5RLJmApTpkgTRaCwWsTNN1Uv1t_t3Pp5=w240-h480-rw)" alt="FIAP" border="0"></a>
+<a href= ""><img src="https://play-lh.googleusercontent.com/S70rI7VrwLic7_p-ax7iAOOopQhcPCzmqyLe5RLJmApTpkgTRaCwWsTNN1Uv1t_t3Pp5=w240-h480-rw" alt="FIAP" width="200">
+  </a>
 </p>
 
-# Nome do Projeto
+# 🩺 HealthInPulse
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="">Pedro Henrique</a>, <a href="">Igor</a>, <a href="https://www.linkedin.com/in/mmoura97/">Matheus Moura</a>, <a href="">Kaue</a>,<a href="">Murylo Amaral</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/allan-roberto-molto-80b85617/)">Allan Roberto Molto</a>
 
 ## Descrição
 
@@ -22,10 +23,13 @@
 
 
 # Healthinpulse
-O HealthInpulse é uma pulseira inteligente que combina  hardware vestível com análise predictiva avançada. A  pulseira coleta continuamente sinais vitais essenciais (ex:  batimentos cardíacos) e interpreta esses dados em tempo  real trazendo alertas relacionado a saúde do usuário.
- faz.
-<br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
+O HealthInPulse é uma pulseira inteligente que combina hardware vestível com análise preditiva avançada.
+
+A solução coleta sinais vitais em tempo real, como batimentos cardíacos, e utiliza esses dados para gerar alertas e insights sobre a saúde do usuário.
+
+# 🎯 Objetivo
+Criar uma solução acessível e inteligente para monitoramento contínuo da saúde, ajudando usuários a prevenirem problemas antes que se tornem críticos.
+
 <br><br>
 May the force be with you!
 <br><br>
