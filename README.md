@@ -1,111 +1,55 @@
-# FIAP
+# FIAP - Faculdade de Informática e Administração Paulista
 
 <p align="center">
-<a href= "[https://www.fecap.br/](https://play.google.com/store/apps/details?id=br.com.fiap.fiapp&hl=pt_PT)"><img src="[https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU](https://play-lh.googleusercontent.com/S70rI7VrwLic7_p-ax7iAOOopQhcPCzmqyLe5RLJmApTpkgTRaCwWsTNN1Uv1t_t3Pp5=w240-h480-rw)" alt="FIAP" border="0"></a>
-</p>
-
-# Nome do Projeto
-
-## Nome do Grupo
-
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
-
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
-
-## Descrição
-
-<p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<a href= ""><img src="https://play-lh.googleusercontent.com/S70rI7VrwLic7_p-ax7iAOOopQhcPCzmqyLe5RLJmApTpkgTRaCwWsTNN1Uv1t_t3Pp5=w240-h480-rw" alt="FIAP" width="200">
+  </a>
 </p>
 
 
+# 👥 Integrantes
 
-# Healthinpulse
-O HealthInpulse é uma pulseira inteligente que combina  hardware vestível com análise predictiva avançada. A  pulseira coleta continuamente sinais vitais essenciais (ex:  batimentos cardíacos) e interpreta esses dados em tempo  real trazendo alertas relacionado a saúde do usuário.
- faz.
-<br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+## Integrantes:  <a href="">Igor</a>, <a href="https://www.linkedin.com/in/kau%C3%AA-souza/">Kauê Souza</a>, <a href="https://www.linkedin.com/in/mmoura97/">Matheus Moura</a>, <a href="">Murylo Amaral</a>, <a href="https://www.linkedin.com/in/pedro-henrique-camacho-14a13b345/">Pedro Henrique Camacho</a>,
 
-## 🛠 Estrutura de pastas
+## Professores Orientadores: <a href="https://www.linkedin.com/in/allan-roberto-molto-80b85617/">Allan Roberto Molto</a>
+
+# 🩺 HealthInPulse
+
+<p align="center">
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/4YJYWj1/Organiz-Ai.png" alt="Organiz-Ai" border="0" /></a>
+</p>
+
+# 🎨 Design
+<a href="https://www.figma.com/design/pcgUF3UIKvVihtgR60Srfb/Prot%C3%B3tipo-Projeto-ADS-3?node-id=0-1&t=cU5q6SxQyyQsoppQ-1">Figma</a>
+
+# 📌 Sobre o Projeto
+
+O HealthInPulse é uma pulseira inteligente que combina hardware vestível com análise preditiva avançada.
+
+A solução coleta sinais vitais em tempo real, como batimentos cardíacos, e utiliza esses dados para gerar alertas e insights sobre a saúde do usuário.
+
+## 🎯 Objetivo
+
+<p>✅ Criar uma solução acessível e inteligente para monitoramento contínuo da saúde.</p>
+<p>✅ Ajudar usuários a prevenirem problemas antes que se tornem críticos</p>
+
+# 🛠 Estrutura de pastas
 
 -Raiz<br>
 |<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
+|-->Documentos<br>
+|-->Imagens<br>
+ &emsp;|-->Fiap Logo<br>
 |-->src<br>
-  &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
+ &emsp;|-->Android/android-app<br>
+ &emsp;|-->Backend/organizai-api<br>
 |readme.md<br>
-
-A pasta raiz contem dois arquivos que devem ser alterados:
-
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-Há também 4 pastas que seguem da seguinte forma:
-
-<b>documentos</b>: Toda a documentação estará nesta pasta.
-
-<b>executáveis</b>: Binários e executáveis do projeto devem estar nesta pasta.
-
-<b>imagens</b>: Imagens do sistema
-
-<b>src</b>: Pasta que contém o código fonte.
-
-## 🛠 Instalação
-
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>Windows:</b>
-
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
-
-## 💻 Configuração para Desenvolvimento
-
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
-Para abrir este projeto você necessita das seguintes ferramentas:
-
--<a href="https://godotengine.org/download">GODOT</a>
-
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
-
-## 📋 Licença/License
-
 
 ## 🎓 Referências
 
-Aqui estão as referências usadas no projeto.
+1. <https://github.com/iuricode/readme-template>
+2. <https://github.com/gabrieldejesus/readme-model>
+3. <https://chooser-beta.creativecommons.org/>
+4. <https://www.toptal.com/developers/gitignore>
 
 1. <https://github.com/iuricode/readme-template>
 2. <https://github.com/gabrieldejesus/readme-model>
