@@ -28,7 +28,7 @@
   <img src="./Images/design.png" alt="Design do projeto" width="600">
 </p>
 <p align="center">
-  <sub>Protótipo desenvolvido no Figma</sub>
+  <sub>Imagem ilustrativa do conceito da pulseira HealthInPulse</sub>
 </p>
 
 ---
