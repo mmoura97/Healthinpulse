@@ -1,8 +1,7 @@
 # FIAP - Faculdade de Informática e Administração Paulista
 
 <p align="center">
-<a href= ""><img src="https://play-lh.googleusercontent.com/S70rI7VrwLic7_p-ax7iAOOopQhcPCzmqyLe5RLJmApTpkgTRaCwWsTNN1Uv1t_t3Pp5=w240-h480-rw" alt="FIAP" width="200">
-  </a>
+  <a href= ""><img src="https://raw.githubusercontent.com/mmoura97/Healthinpulse/main/Images/Fiap-logo-novo.jpg" alt="FIAP" width="200">
 </p>
 
 
