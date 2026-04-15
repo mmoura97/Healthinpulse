@@ -1,0 +1,207 @@
+:root {
+  --bg-blue: #0056b3;
+  --bg-sidebar: #ffffff;
+  --text-dark: #333333;
+  --text-gray: #6c757d;
+  --card-bg: #ffffff;
+  --color-red: #dc3545;
+  --color-blue: #0d6efd;
+  --color-orange: #fd7e14;
+  --color-green: #198754;
+  --bg-red-light: #f8d7da;
+  --bg-blue-light: #cfe2ff;
+  --bg-orange-light: #ffe5d0;
+  --bg-green-light: #d1e7dd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-blue);
+}
+
+/* LAYOUT BASE */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.logo i {
+  background: var(--bg-blue-light);
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--color-blue);
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  background: #f0f0f0;
+}
+
+.nav-links li.active {
+  background: var(--bg-blue-light);
+  color: var(--color-blue);
+}
+
+/* MAIN */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.header-buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-white {
+  background: white;
+  color: var(--color-blue);
+}
+
+.btn-red {
+  background: var(--color-red);
+  color: white;
+}
+
+.btn-outline {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+/* GRID */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ICONES */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-red {
+  background: var(--bg-red-light);
+  color: var(--color-red);
+}
+
+.icon-blue {
+  background: var(--bg-blue-light);
+  color: var(--color-blue);
+}
+
+.icon-orange {
+  background: var(--bg-orange-light);
+  color: var(--color-orange);
+}
+
+.icon-green {
+  background: var(--bg-green-light);
+  color: var(--color-green);
+}
+
+/* 🔥 RESPONSIVO */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    text-align: center;
+  }
+}
