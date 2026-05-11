@@ -1,40 +1,37 @@
 export default function Sidebar() {
-return (
+  return (
     <aside className="sidebar">
-    <div className="logo">
+      <div className="logo">
         <i className="fa-solid fa-heart-pulse"></i>
         <div>
-        Healthinpulse
-        <span>Monitore sua saúde</span>
+          <h2>HealthInPulse</h2>
+          <span>Monitoramento inteligente</span>
         </div>
-    </div>
+      </div>
 
-    <p className="nav-section">NAVEGAÇÃO</p>
+      <nav>
+        <ul className="nav-links">
+          <li className="active">
+            <i className="fa-solid fa-chart-line"></i>
+            Dashboard
+          </li>
 
-    <ul className="nav-links">
-        <li className="active">
-        <i className="fa-solid fa-chart-line"></i> Dashboard
-        </li>
-        <li>
-        <i className="fa-solid fa-plus"></i> Adicionar Dados
-        </li>
-        <li>
-        <i className="fa-solid fa-clock-rotate-left"></i> Histórico
-        </li>
-        <li>
-        <i className="fa-solid fa-bullseye"></i> Metas de Saúde
-        </li>
-        <li>
-        <i className="fa-solid fa-gear"></i> Configurações
-        </li>
-    </ul>
+          <li>
+            <i className="fa-solid fa-heart"></i>
+            Saúde
+          </li>
 
-    <div className="status-pulseira">
-        <p>
-        <i className="fa-solid fa-circle"></i> Conectado
-        </p>
-        <span>Pulseira sincronizada</span>
-    </div>
+          <li>
+            <i className="fa-solid fa-clock"></i>
+            Histórico
+          </li>
+
+          <li>
+            <i className="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+        </ul>
+      </nav>
     </aside>
-);
+  )
 }
