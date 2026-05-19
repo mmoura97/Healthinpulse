@@ -1,0 +1,278 @@
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.login-left {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.95),
+      rgba(29, 78, 216, 0.95)
+    ),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+
+  padding: 60px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+
+  font-size: 1.5rem;
+}
+
+.brand h1 {
+  font-size: 2rem;
+}
+
+.brand p {
+  opacity: 0.85;
+}
+
+.hero-content {
+  max-width: 560px;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  margin-bottom: 24px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hero-content h2 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.92;
+  line-height: 1.6;
+}
+
+.hero-cards {
+  margin-top: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+
+  padding: 18px 22px;
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-weight: 600;
+}
+
+.login-right {
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+.login-header {
+  margin-bottom: 32px;
+}
+
+.login-header h2 {
+  font-size: 2.5rem;
+  color: var(--slate-900);
+}
+
+.login-header p {
+  margin-top: 8px;
+  color: var(--slate-500);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border: 1px solid var(--slate-200);
+  border-radius: 14px;
+
+  padding: 14px 16px;
+
+  transition: var(--transition);
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--blue-500);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.input-wrapper i {
+  color: var(--slate-400);
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.login-button {
+  border: none;
+  border-radius: 14px;
+
+  padding: 16px;
+
+  background: linear-gradient(
+    135deg,
+    var(--blue-600),
+    var(--blue-700)
+  );
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+}
+
+.login-footer {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.login-footer p {
+  color: var(--slate-500);
+}
+
+.login-footer a {
+  color: var(--blue-600);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-left {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-right {
+    padding: 24px;
+  }
+
+  .login-header h2 {
+    font-size: 2rem;
+  }
+}
+
+.role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.role-card {
+  border: 1.5px solid var(--slate-200);
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.role-card.selected {
+  border-color: var(--blue-600);
+  background: var(--blue-50);
+  color: var(--blue-700);
+}
+
+.demo-button {
+  border: 1.5px dashed var(--slate-300);
+  background: transparent;
+  color: var(--slate-500);
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-footer button {
+  border: none;
+  background: transparent;
+  color: var(--blue-600);
+  font-weight: 700;
+  cursor: pointer;
+}

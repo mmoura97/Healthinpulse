@@ -1,37 +1,39 @@
-export default function Sidebar() {
+function Sidebar() {
   return (
     <aside className="sidebar">
-      <div className="logo">
+      <div className="sidebar-brand">
         <i className="fa-solid fa-heart-pulse"></i>
-        <div>
-          <h2>HealthInPulse</h2>
-          <span>Monitoramento inteligente</span>
-        </div>
+        <span>HealthInPulse</span>
       </div>
 
-      <nav>
-        <ul className="nav-links">
-          <li className="active">
-            <i className="fa-solid fa-chart-line"></i>
-            Dashboard
-          </li>
+      <nav className="sidebar-nav">
+        <button className="nav-item active">
+          <i className="fa-solid fa-chart-line"></i>
+          Dashboard
+        </button>
 
-          <li>
-            <i className="fa-solid fa-heart"></i>
-            Saúde
-          </li>
+        <button className="nav-item">
+          <i className="fa-solid fa-heart-pulse"></i>
+          Saúde
+        </button>
 
-          <li>
-            <i className="fa-solid fa-clock"></i>
-            Histórico
-          </li>
+        <button className="nav-item">
+          <i className="fa-solid fa-file-waveform"></i>
+          Exames
+        </button>
 
-          <li>
-            <i className="fa-solid fa-gear"></i>
-            Configurações
-          </li>
-        </ul>
+        <button className="nav-item">
+          <i className="fa-solid fa-user-doctor"></i>
+          Médico
+        </button>
+
+        <button className="nav-item">
+          <i className="fa-solid fa-gear"></i>
+          Configurações
+        </button>
       </nav>
     </aside>
-  )
+  );
 }
+
+export default Sidebar;
