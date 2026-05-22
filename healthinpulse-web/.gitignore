@@ -1,47 +1,36 @@
-# Logs
-logs
-*.log
+# dependencies
+node_modules
+
+# build
+dist
+dist-ssr
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-# Dependencies
-node_modules
-
-# Build
-dist
-dist-ssr
-
-# Environment variables
+# environment variables
 .env
-*.local
 
-# Vite
+# vite
 .vite
 
-# Coverage
+# coverage
 coverage
 
-# Temporary files
-*.tmp
-*.temp
-
-# VSCode
+# editor
 .vscode/*
 !.vscode/extensions.json
 
-# IDEs
 .idea
-
-# OS files
 .DS_Store
 Thumbs.db
 
-# Visual Studio
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# temp
+*.tmp
+*.temp
+
+# local
+*.local

@@ -1,40 +1,18 @@
-export default function Header({
-  simulando,
-  toggleSimulacao,
-  simularEmergencia,
-  gerarDadoAleatorio,
-  abrirModal,
-}) {
-  const dataAtual = new Date().toLocaleDateString('pt-BR', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-  })
-
+function Header({ user }) {
   return (
-    <header className="header">
+    <header className="dashboard-header">
       <div>
-        <h1>Dashboard de Saúde</h1>
-        <p>{dataAtual}</p>
+        <h1>Olá, {user?.name}</h1>
+        <p>Monitoramento inteligente em tempo real</p>
       </div>
 
-      <div className="header-buttons">
-        <button className="btn btn-white" onClick={toggleSimulacao}>
-          {simulando ? 'Pausar' : 'Iniciar'}
-        </button>
-
-        <button className="btn btn-danger" onClick={simularEmergencia}>
-          Emergência
-        </button>
-
-        <button className="btn btn-outline" onClick={gerarDadoAleatorio}>
-          Atualizar
-        </button>
-
-        <button className="btn btn-primary" onClick={abrirModal}>
-          Adicionar Dados
-        </button>
+      <div className="header-profile">
+        <div className="profile-avatar">
+          {user?.name?.charAt(0)}
+        </div>
       </div>
     </header>
-  )
+  );
 }
+
+export default Header;

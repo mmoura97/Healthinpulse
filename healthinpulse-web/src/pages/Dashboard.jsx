@@ -1,75 +1,151 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import Sidebar from '../components/Sidebar'
-import Header from '../components/Header'
-import Card from '../components/Card'
-import Charts from '../components/Charts'
-import Goals from '../components/Goals'
-import Modal from '../components/Modal'
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
+import MetricCard from "../components/MetricCard";
+import BpmChart from "../components/BpmChart";
+import CaloriesChart from "../components/CaloriesChart";
+import GoalsSection from "../components/GoalsSection";
+import MeasurementsHistory from "../components/MeasurementsHistory";
+import AddDataModal from "../components/AddDataModal";
+import MobileMenuButton from "../components/MobileMenuButton";
 
-import useHealthData from '../hooks/useHealthData'
+import useHealthMetrics from "../hooks/useHealthMetrics";
 
-export default function Dashboard() {
-  const data = useHealthData()
+import "../styles/dashboard.css";
 
-  const [modalOpen, setModalOpen] = useState(false)
+function Dashboard({ user, onNavigate, onLogout }) {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const {
+    bpm,
+    steps,
+    calories,
+    status,
+    running,
+    bpmHistory,
+    caloriesHistory,
+    measurements,
+    goals,
+    generateData,
+    toggleSimulation,
+    simulateEmergency,
+    addManualData,
+  } = useHealthMetrics();
 
   return (
-    <div className="app-container">
-      <Sidebar />
+    <div className="dashboard-layout">
+      <Sidebar
+        currentScreen="dashboard"
+        onNavigate={onNavigate}
+        onLogout={onLogout}
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
 
-      <main className="main-content">
-        <Header
-          simulando={data.simulando}
-          toggleSimulacao={data.toggleSimulacao}
-          simularEmergencia={data.simularEmergencia}
-          gerarDadoAleatorio={data.gerarDadoAleatorio}
-          abrirModal={() => setModalOpen(true)}
+      <main className="dashboard-main">
+        <MobileMenuButton
+          onClick={() => setSidebarOpen(true)}
         />
 
-        <div className="dashboard-grid">
-          <Card
-            title="BPM"
-            value={data.bpm}
-            unit="BPM"
-            icon="fa-solid fa-heart-pulse"
-            color="icon-red"
-          />
+        <Header user={user} />
 
-          <Card
-            title="Passos"
-            value={data.passos}
-            unit="passos"
-            icon="fa-solid fa-shoe-prints"
-            color="icon-blue"
-          />
+        <div className="dashboard-actions">
+          <button
+            className="action-btn primary"
+            onClick={toggleSimulation}
+          >
+            <i
+              className={
+                running
+                  ? "fa-solid fa-pause"
+                  : "fa-solid fa-play"
+              }
+            ></i>
 
-          <Card
-            title="Calorias"
-            value={data.calorias}
-            unit="kcal"
-            icon="fa-solid fa-fire"
-            color="icon-orange"
-          />
+            {running ? "Pausar" : "Iniciar"}
+          </button>
 
-          <Card
-            title="Status"
-            value={data.status}
-            unit=""
-            icon="fa-solid fa-triangle-exclamation"
-            color="icon-green"
-          />
+          <button
+            className="action-btn danger"
+            onClick={simulateEmergency}
+          >
+            <i className="fa-solid fa-triangle-exclamation"></i>
+            Simular Emergência
+          </button>
+
+          <button
+            className="action-btn ghost"
+            onClick={generateData}
+          >
+            <i className="fa-solid fa-rotate"></i>
+            Atualizar
+          </button>
+
+          <button
+            className="action-btn ghost"
+            onClick={() => setModalOpen(true)}
+          >
+            <i className="fa-solid fa-plus"></i>
+            Adicionar Dados
+          </button>
         </div>
 
-        <Charts historicoBpm={data.historicoBpm} />
+        <section className="metrics-grid">
+          <MetricCard
+            title="BPM"
+            value={bpm}
+            icon="fa-solid fa-heart-pulse"
+            color="#dbeafe"
+          />
 
-        <Goals passos={data.passos} />
+          <MetricCard
+            title="Passos"
+            value={steps.toLocaleString("pt-BR")}
+            icon="fa-solid fa-shoe-prints"
+            color="#dcfce7"
+          />
 
-        <Modal
+          <MetricCard
+            title="Calorias"
+            value={calories.toLocaleString("pt-BR")}
+            icon="fa-solid fa-fire"
+            color="#fee2e2"
+          />
+
+          <MetricCard
+            title="Status"
+            value={status}
+            icon="fa-solid fa-shield-heart"
+            color={
+              status === "PERIGO"
+                ? "#fee2e2"
+                : "#ede9fe"
+            }
+          />
+        </section>
+
+        <section className="charts-grid">
+          <BpmChart data={bpmHistory} />
+
+          <CaloriesChart data={caloriesHistory} />
+        </section>
+
+        <GoalsSection goals={goals} />
+
+        <MeasurementsHistory
+          measurements={measurements}
+        />
+
+        <AddDataModal
           open={modalOpen}
-          fecharModal={() => setModalOpen(false)}
+          onClose={() => setModalOpen(false)}
+          onSave={addManualData}
         />
       </main>
     </div>
-  )
+  );
 }
+
+export default Dashboard;

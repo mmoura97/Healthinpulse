@@ -1,37 +1,63 @@
-export default function Sidebar() {
-  return (
-    <aside className="sidebar">
-      <div className="logo">
-        <i className="fa-solid fa-heart-pulse"></i>
-        <div>
-          <h2>HealthInPulse</h2>
-          <span>Monitoramento inteligente</span>
-        </div>
-      </div>
+function Sidebar({ currentScreen, onNavigate, onLogout, isOpen, onClose }) {
+  function handleNavigate(screen) {
+    onNavigate(screen);
+    if (onClose) onClose();
+  }
 
-      <nav>
-        <ul className="nav-links">
-          <li className="active">
+  return (
+    <>
+      <div
+        className={isOpen ? "sidebar-overlay open" : "sidebar-overlay"}
+        onClick={onClose}
+      ></div>
+
+      <aside className={isOpen ? "sidebar sidebar-open" : "sidebar"}>
+        <div className="sidebar-brand">
+          <i className="fa-solid fa-heart-pulse"></i>
+          <span>HealthInPulse</span>
+        </div>
+
+        <nav className="sidebar-nav">
+          <button
+            className={currentScreen === "dashboard" ? "nav-item active" : "nav-item"}
+            onClick={() => handleNavigate("dashboard")}
+          >
             <i className="fa-solid fa-chart-line"></i>
             Dashboard
-          </li>
+          </button>
 
-          <li>
-            <i className="fa-solid fa-heart"></i>
-            Saúde
-          </li>
+          <button
+            className={currentScreen === "triage" ? "nav-item active" : "nav-item"}
+            onClick={() => handleNavigate("triage")}
+          >
+            <i className="fa-solid fa-stethoscope"></i>
+            Triagem
+          </button>
 
-          <li>
-            <i className="fa-solid fa-clock"></i>
-            Histórico
-          </li>
+          <button
+            className={currentScreen === "exams" ? "nav-item active" : "nav-item"}
+            onClick={() => handleNavigate("exams")}
+          >
+            <i className="fa-solid fa-file-waveform"></i>
+            Exames
+          </button>
 
-          <li>
-            <i className="fa-solid fa-gear"></i>
-            Configurações
-          </li>
-        </ul>
-      </nav>
-    </aside>
-  )
+          <button
+            className={currentScreen === "doctor" ? "nav-item active" : "nav-item"}
+            onClick={() => handleNavigate("doctor")}
+          >
+            <i className="fa-solid fa-user-doctor"></i>
+            Médico
+          </button>
+
+          <button className="nav-item logout" onClick={onLogout}>
+            <i className="fa-solid fa-right-from-bracket"></i>
+            Sair
+          </button>
+        </nav>
+      </aside>
+    </>
+  );
 }
+
+export default Sidebar;
