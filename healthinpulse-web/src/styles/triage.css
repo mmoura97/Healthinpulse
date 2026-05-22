@@ -1,0 +1,75 @@
+.triage-page {
+    min-height: 100vh;
+    padding: 32px;
+    background: #f8fafc;
+}
+
+.triage-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.triage-header p {
+    color: #64748b;
+}
+
+.triage-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.triage-actions button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.triage-card {
+    background: white;
+    border-radius: 22px;
+    padding: 32px;
+    max-width: 680px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.triage-progress {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.triage-progress div {
+    height: 100%;
+    background: #2563eb;
+}
+
+.triage-card span {
+    color: #64748b;
+    font-weight: 700;
+}
+
+.triage-card h2 {
+    margin: 16px 0 24px;
+}
+
+.triage-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.triage-buttons button,
+.triage-card>button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 12px;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-weight: 700;
+}

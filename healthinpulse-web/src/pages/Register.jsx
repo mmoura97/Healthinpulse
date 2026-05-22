@@ -1,47 +1,55 @@
 import { useState } from "react";
+
 import { createAccount } from "../services/authService";
-import "../styles/login.css";
+
 import "../styles/register.css";
 
 function Register({ onBack }) {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const [error, setError] = useState("");
 
-  function handleChange(event) {
-    setForm({
-      ...form,
-      [event.target.name]: event.target.value,
-    });
-  }
+  const [success, setSuccess] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
+
     setError("");
 
-    if (!form.name || !form.email || !form.password) {
+    if (!name || !email || !password) {
       setError("Preencha todos os campos.");
+
       return;
     }
 
-    if (form.password !== form.confirmPassword) {
+    if (password.length < 6) {
+      setError("A senha precisa ter ao menos 6 caracteres.");
+
+      return;
+    }
+
+    if (password !== confirmPassword) {
       setError("As senhas não coincidem.");
+
       return;
     }
 
     try {
       createAccount({
-        name: form.name,
-        email: form.email,
-        password: form.password,
+        name,
+        email,
+        password,
       });
 
-      onBack();
+      setSuccess(true);
+
+      setTimeout(() => {
+        onBack();
+      }, 1800);
     } catch (err) {
       setError(err.message);
     }
@@ -49,72 +57,101 @@ function Register({ onBack }) {
 
   return (
     <div className="register-page">
-      <section className="register-left">
-        <div className="brand">
-          <div className="brand-icon">
+      <div className="register-card">
+        <div className="register-header">
+          <div className="register-logo">
             <i className="fa-solid fa-heart-pulse"></i>
           </div>
 
-          <div>
-            <h1>HealthInPulse</h1>
-            <p>Plataforma de Saúde Inteligente</p>
-          </div>
-        </div>
+          <h1>Criar conta</h1>
 
-        <div className="register-hero">
-          <h2>Crie sua conta e monitore sua saúde.</h2>
           <p>
-            Configure seu perfil para acompanhar métricas, exames e metas de
-            saúde com precisão clínica.
+            Cadastre-se para acessar a plataforma clínica HealthInPulse
           </p>
         </div>
-      </section>
 
-      <section className="register-right">
-        <form className="register-card" onSubmit={handleSubmit}>
-          <h2>Criar nova conta</h2>
-          <p>Preencha os dados do seu perfil</p>
+        {success ? (
+          <div className="register-success">
+            <i className="fa-solid fa-circle-check"></i>
 
-          {error && <div className="form-error">{error}</div>}
+            <h2>Conta criada com sucesso</h2>
 
-          <input
-            name="name"
-            placeholder="Nome completo"
-            value={form.name}
-            onChange={handleChange}
-          />
+            <p>Redirecionando para o login...</p>
+          </div>
+        ) : (
+          <form className="register-form" onSubmit={handleSubmit}>
+            {error && <div className="register-error">{error}</div>}
 
-          <input
-            name="email"
-            type="email"
-            placeholder="E-mail"
-            value={form.email}
-            onChange={handleChange}
-          />
+            <div className="register-group">
+              <label>Nome completo</label>
 
-          <input
-            name="password"
-            type="password"
-            placeholder="Senha"
-            value={form.password}
-            onChange={handleChange}
-          />
+              <div className="register-input">
+                <i className="fa-solid fa-user"></i>
 
-          <input
-            name="confirmPassword"
-            type="password"
-            placeholder="Confirmar senha"
-            value={form.confirmPassword}
-            onChange={handleChange}
-          />
+                <input
+                  type="text"
+                  placeholder="Digite seu nome"
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                />
+              </div>
+            </div>
 
-          <button type="submit">Criar conta</button>
+            <div className="register-group">
+              <label>Email</label>
 
-          <button type="button" className="back-button" onClick={onBack}>
-            Já possui conta? <strong>Entrar</strong>
-          </button>
-        </form>
-      </section>
+              <div className="register-input">
+                <i className="fa-solid fa-envelope"></i>
+
+                <input
+                  type="email"
+                  placeholder="Digite seu email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="register-group">
+              <label>Senha</label>
+
+              <div className="register-input">
+                <i className="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  placeholder="Crie uma senha"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="register-group">
+              <label>Confirmar senha</label>
+
+              <div className="register-input">
+                <i className="fa-solid fa-shield"></i>
+
+                <input
+                  type="password"
+                  placeholder="Repita sua senha"
+                  value={confirmPassword}
+                  onChange={(event) => setConfirmPassword(event.target.value)}
+                />
+              </div>
+            </div>
+
+            <button className="register-button" type="submit">
+              Criar conta
+            </button>
+
+            <button type="button" className="register-back" onClick={onBack}>
+              Voltar ao login
+            </button>
+          </form>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,12 +1,51 @@
-import { useState } from "react";
-import { createDemoAccount, loginPatient } from "../services/authService";
+import { useEffect, useState } from "react";
+import {
+  createDemoAccount,
+  deleteAccount,
+  getAccounts,
+  loginPatient,
+} from "../services/authService";
+
 import "../styles/login.css";
+
+function getInitials(name) {
+  return name
+    ?.split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
 
 function Login({ onRegister, onLogin }) {
   const [role, setRole] = useState("patient");
   const [email, setEmail] = useState("joao@healthinpulse.com");
   const [password, setPassword] = useState("demo123");
   const [error, setError] = useState("");
+  const [accounts, setAccounts] = useState([]);
+  const [selectedAccountId, setSelectedAccountId] = useState(null);
+
+  useEffect(() => {
+    const storedAccounts = getAccounts();
+
+    setAccounts(storedAccounts);
+
+    if (storedAccounts.length > 0) {
+      const first = storedAccounts[0];
+
+      setSelectedAccountId(first.id);
+      setEmail(first.email);
+      setPassword(first.password || "");
+    }
+  }, []);
+
+  function selectAccount(account) {
+    setSelectedAccountId(account.id);
+    setEmail(account.email);
+    setPassword(account.password || "");
+    setRole(account.role || "patient");
+    setError("");
+  }
 
   function handleLogin(event) {
     event.preventDefault();
@@ -39,11 +78,29 @@ function Login({ onRegister, onLogin }) {
 
   function handleDemo() {
     const demo = createDemoAccount();
+    const updatedAccounts = getAccounts();
+
+    setAccounts(updatedAccounts);
+    selectAccount(demo);
 
     onLogin({
       userRole: "patient",
       userData: demo,
     });
+  }
+
+  function handleDeleteAccount(event, accountId) {
+    event.stopPropagation();
+
+    const updated = deleteAccount(accountId);
+
+    setAccounts(updated);
+
+    if (selectedAccountId === accountId) {
+      setSelectedAccountId(null);
+      setEmail("");
+      setPassword("");
+    }
   }
 
   return (
@@ -99,6 +156,42 @@ function Login({ onRegister, onLogin }) {
             <h2>Entrar</h2>
             <p>Acesse sua conta para continuar</p>
           </div>
+
+          {accounts.length > 0 && (
+            <div className="saved-accounts">
+              <div className="saved-accounts-title">Contas salvas</div>
+
+              {accounts.map((account) => (
+                <button
+                  type="button"
+                  key={account.id}
+                  className={
+                    selectedAccountId === account.id
+                      ? "saved-account selected"
+                      : "saved-account"
+                  }
+                  onClick={() => selectAccount(account)}
+                >
+                  <div className="saved-account-avatar">
+                    {getInitials(account.name)}
+                  </div>
+
+                  <div className="saved-account-info">
+                    <strong>{account.name}</strong>
+                    <span>{account.email}</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    className="saved-account-delete"
+                    onClick={(event) => handleDeleteAccount(event, account.id)}
+                  >
+                    <i className="fa-solid fa-xmark"></i>
+                  </button>
+                </button>
+              ))}
+            </div>
+          )}
 
           <div className="role-selector">
             <button

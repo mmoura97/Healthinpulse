@@ -22,6 +22,7 @@ export function createAccount({ name, email, password }) {
     name,
     email,
     password,
+    role: "patient",
     createdAt: new Date().toISOString(),
   };
 
@@ -56,6 +57,7 @@ export function createDemoAccount() {
       name: "João Oliveira",
       email: "joao@healthinpulse.com",
       password: "demo123",
+      role: "patient",
       createdAt: new Date().toISOString(),
     };
 
@@ -64,4 +66,14 @@ export function createDemoAccount() {
   }
 
   return demo;
+}
+
+export function deleteAccount(accountId) {
+  const accounts = getAccounts();
+
+  const updated = accounts.filter((account) => account.id !== accountId);
+
+  saveAccounts(updated);
+
+  return updated;
 }
